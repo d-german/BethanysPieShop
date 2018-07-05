@@ -1,14 +1,8 @@
 ﻿@using BethanysPieShop.Models
-@model IEnumerable<BethanysPieShop.Models.Pie>
-<title>Hello Worls</title>
-<!DOCTYPE html>
-<html>
+@model BethanysPieShop.ViewModels.HomeViewModel
 
-<head>
-    <meta name="viewport" content="width=device-width"/>
-</head>
-<body>
-@foreach (var pie in Model)
+<h2>@Model.Title</h2>
+@foreach (var pie in Model.Pies)
 {
     <div>
         <h2>@pie.Name</h2>
@@ -16,7 +10,3 @@
     </div>
 
 }
-
-
-</body>
-</html>
